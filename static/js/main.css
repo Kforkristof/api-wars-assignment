@@ -1,0 +1,28 @@
+h1{
+    background-color: #323232;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+body{
+    background-color: #494949;
+    /*width: max-content;*/
+    margin: auto;
+}
+
+
+
+#head-wrapper{
+    display: block;
+}
+
+.dark-scroll{
+    color: #606060;
+    background-color: #fff;
+}
+
+#residents-modal-content{
+    width: max-content;
+}
