@@ -49,6 +49,5 @@ def registration():
                 return redirect('/')
             else:
                 return '<h1>This username is already exists</h1>'
-    except Exception as exception:
-        return exception
-
+    except Exception as e:
+        return e.__class__.__name__
