@@ -37,14 +37,18 @@ def logout():
 
 @app.route('/registration', methods=['GET', 'POST'])
 def registration():
-    if request.method == 'GET':
-        return render_template('registration.html')
-    else:
-        user_name = request.form['username']
-        password = request.form['password']
-        sec_password = request.form['sec_password']
-        if password == sec_password and not data_manager.check_existing_username(user_name):
-            data_manager.register_user(user_name, password)
-            return redirect('/')
+    try:
+        if request.method == 'GET':
+            return render_template('registration.html')
         else:
-            return '<h1>This username is already exists</h1>'
+            user_name = request.form['username']
+            password = request.form['password']
+            sec_password = request.form['sec_password']
+            if password == sec_password and not data_manager.check_existing_username(user_name):
+                data_manager.register_user(user_name, password)
+                return redirect('/')
+            else:
+                return '<h1>This username is already exists</h1>'
+    except Exception as exception:
+        return exception
+
