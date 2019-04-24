@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
 import data_manager
 import util
-import logging
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+import traceback
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -52,5 +50,6 @@ def registration():
                 return redirect('/')
             else:
                 return '<h1>This username is already exists</h1>'
-    except Exception as e:
-        logger.exception(e)
+    except Exception:
+        print(traceback.format_exc())
+
