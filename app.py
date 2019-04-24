@@ -50,4 +50,4 @@ def registration():
             else:
                 return '<h1>This username is already exists</h1>'
     except Exception as e:
-        return e.__class__.__name__
+        return e.args
