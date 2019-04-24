@@ -51,4 +51,4 @@ def registration():
             else:
                 return '<h1>This username is already exists</h1>'
     except Exception:
-        print(sys.exc_info()[0])
+        return sys.exc_info()[0]
