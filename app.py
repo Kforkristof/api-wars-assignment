@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
 import data_manager
 import util
-import traceback
+import sys
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -51,5 +51,4 @@ def registration():
             else:
                 return '<h1>This username is already exists</h1>'
     except Exception:
-        print(traceback.format_exc())
-
+        print(sys.exc_info()[0])
