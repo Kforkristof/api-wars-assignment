@@ -5,10 +5,10 @@ import os
 def get_connection_string():
     # setup connection string
     # to do this, please define these environment variables first
-    user_name = os.environ.get('loujrykxrivlnz')
-    password = os.environ.get('a7a778fad0278bc72eac4d8b56ecbd9a60fa76c14f03b72946eb4734d7ab135b')
-    host = os.environ.get('ec2-54-228-252-67.eu-west-1.compute.amazonaws.com')
-    database_name = os.environ.get('droc7aa4e8k5')
+    user_name = 'loujrykxrivlnz'
+    password = 'a7a778fad0278bc72eac4d8b56ecbd9a60fa76c14f03b72946eb4734d7ab135b'
+    host = 'ec2-54-228-252-67.eu-west-1.compute.amazonaws.com'
+    database_name = 'droc7aa4e8k5'
 
     env_variables_defined = user_name and password and host and database_name
 
