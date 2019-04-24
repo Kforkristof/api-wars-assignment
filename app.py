@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 import data_manager
 import util
-import sys
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
