@@ -50,5 +50,5 @@ def registration():
                 return redirect('/')
             else:
                 return '<h1>This username is already exists</h1>'
-    except Exception:
-        return sys.exc_info()[0]
+    except Exception as error:
+        print(error)
