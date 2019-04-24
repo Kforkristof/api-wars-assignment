@@ -26,3 +26,8 @@ body{
 #residents-modal-content{
     width: max-content;
 }
+
+#login-wrapper{
+    margin-left: 10px;
+    margin-top: 10px;
+}

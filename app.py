@@ -48,7 +48,3 @@ def registration():
             return redirect('/')
         else:
             return '<h1>This username is already exists</h1>'
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

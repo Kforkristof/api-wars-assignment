@@ -18,6 +18,6 @@ def check_existing_username(cursor, user_name):
 
 @connection_handler.connection_handler
 def get_good_hash_by_user_name(cursor, user_name):
-    cursor.execute('''SELECT pw_hash FROM users WHERE user_name = %(user_name)s''', {'user_name': user_name})
+    cursor.execute('''SELECT hashed_pw FROM users WHERE user_name = %(user_name)s''', {'user_name': user_name})
     password_hash = cursor.fetchall()[0]['pw_hash']
     return password_hash
